@@ -1,0 +1,54 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+
+#include<ctype.h>
+
+
+int main()
+
+{
+	
+int n,i,j,count=0;
+	
+scanf("%d",&n);
+	
+char *a;
+	
+a=(char *)malloc(n * sizeof(char));
+	
+for(i=0;i<n*2;i++)
+	
+{
+	   
+ scanf("%c",(a+i));
+	
+}
+	
+for(i=1;i<n*2;i++)
+	
+{
+	   
+ for(j=0;j<i;j++)
+	  
+  {
+	      
+   if(tolower(*(a+i))==tolower(*(a+j)))
+	        
+   break;
+	   
+ }
+	    
+if(i==j)
+	   
+count++;
+	    
+	
+}
+	
+printf("%d",count);
+	
+	
+return 0;
+
+}
